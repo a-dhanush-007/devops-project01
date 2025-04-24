@@ -2,7 +2,7 @@
 # This script is used to get the argocd, prometheus & grafana urls & credentials
 
 aws configure
-aws eks update-kubeconfig --region "us-east-1" --name "amazon-prime-cluster"
+aws eks update-kubeconfig --region "ap-south-1" --name "amazon-prime-cluster"
 
 # ArgoCD Access
 argo_url=$(kubectl get svc -n argocd | grep argocd-server | awk '{print$4}' | head -n 1)
