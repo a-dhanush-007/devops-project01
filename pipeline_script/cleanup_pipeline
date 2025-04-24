@@ -16,7 +16,7 @@ pipeline {
                 script {
                     withCredentials([string(credentialsId: 'access-key', variable: 'AWS_ACCESS_KEY'),
                                      string(credentialsId: 'secret-key', variable: 'AWS_SECRET_KEY')]) {
-                        sh "aws eks --region us-east-1 update-kubeconfig --name ${params.CLUSTER_NAME}"
+                        sh "aws eks --region ap-south-1 update-kubeconfig --name ${params.CLUSTER_NAME}"
                     }
                 }
             }
@@ -53,14 +53,14 @@ pipeline {
                 script {
                     // Step 1: Delete ECR Repository
                     sh '''
-                    aws ecr delete-repository --repository-name amazon-prime --region us-east-1 --force
+                    aws ecr delete-repository --repository-name amazon-prime --region ap-south-1 --force
                     '''
 
                     // Step 2: Delete KMS Keys
                     sh '''
-                    for key in $(aws kms list-keys --region us-east-1 --query "Keys[*].KeyId" --output text); do
-                        aws kms disable-key --key-id $key --region us-east-1
-                        aws kms schedule-key-deletion --key-id $key --pending-window-in-days 7 --region us-east-1
+                    for key in $(aws kms list-keys --region ap-south-1 --query "Keys[*].KeyId" --output text); do
+                        aws kms disable-key --key-id $key --region ap-south-1
+                        aws kms schedule-key-deletion --key-id $key --pending-window-in-days 7 --region ap-south-1
                     done
                     '''
                 }
