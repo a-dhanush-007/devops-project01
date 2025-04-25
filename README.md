@@ -1,5 +1,5 @@
 # Amazon Prime Clone Deployment Project
-![Pipeline Overview]([./src/Overview.png](https://github.com/a-dhanush-007/devops-project01/blob/49d73bec2051dae242ee9c410a71fcd8fec46de4/src/Devops%20Project.jpg))
+![Pipeline Overview](./src/Overview.png)
 
 ## Project Overview
 This project demonstrates deploying an Amazon Prime clone using a set of DevOps tools and practices. The primary tools include:
