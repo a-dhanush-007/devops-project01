@@ -30,7 +30,7 @@ This project demonstrates deploying an Amazon Prime clone using a set of DevOps 
 ## Infrastructure Setup Using Terraform
 1. **Clone the Repository** (Open Command Prompt & run below):
    ```bash
-   git clone https://github.com/pandacloud1/DevopsProject2.git
+   https://github.com/a-dhanush-007/devops-project01.git
    cd DevopsProject2
    code .   # this command will open VS code in backend
    ```
@@ -343,9 +343,3 @@ pipeline {
 		
     }
 }
-```
-
-## Additional Information
-For further details, refer to the word document containing a complete write-up of the project.
-
----
